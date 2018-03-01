@@ -1,6 +1,6 @@
 {
     "name": "Nibs",
-    "description": "Customer loyalty application for demo purpose",
+    "description": "Customer loyalty application for demo purpose ",
     "addons": ["heroku-postgresql:hobby-dev"],
     "scripts": {
     "postdeploy": "pg_dump $STAGING_DATABASE_URL | psql $DATABASE_URL"
