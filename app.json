@@ -2,10 +2,21 @@
     "name": "Nibs",
     "description": "Customer loyalty application for demo purpose",
     "addons": ["heroku-postgresql:hobby-dev"],
+    "scripts": {
+    "postdeploy": "pg_dump $STAGING_DATABASE_URL | psql $DATABASE_URL"
+    },
     "env": {
       "STAGING_DATABASE_URL": {
-        "description": "url of the prd db that will be dumped .. yes its dirty",
-        "value" : "postgres://qdslihdgxphzxv:310882d60da978e2ff3d8b6ee3f105717ee295978af52887f041b904f0c281a1@ec2-54-243-239-66.compute-1.amazonaws.com:5432/d7hjccrkjgbc2t"
+        "required" : true
+      },
+      "CONTACTS_ACCOUNT_ID": {
+        "required" : true
+      },
+      "INTEGRATION_USER_NAME": {
+        "required" : true
+      },
+      "INTEGRATION_USER_PASSWORD": {
+        "required" : true
       }
     }
 }
