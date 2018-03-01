@@ -1,6 +1,6 @@
 {
     "name": "Nibs",
-    "description": "Customer loyalty application",
+    "description": "Customer loyalty application for demo purpose",
     "addons": ["heroku-postgresql:hobby-dev"],
     "env": {
       "STAGING_DATABASE_URL": {
